@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jenipher Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/f52cc9b91e.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- -----Header/home page--- -->
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" alt="logo">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Portfolio</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <h1>Hi, I'm <span>Jenipher Nancy</span></h1>
+                <p>Web Developer</p>
+            </div>
+        </div>
+    </div>
+    <!-- --About-- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+
+                <div class="about-col-1">
+                    <h1 class="sub-title">About Me</h1>
+                    <p> A Passionate web developer skilled in ReactJS</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ui>
+                            <li><span>UI/UX</span><br>Designing Web/App Interfaces</li>
+                            <li><span>Web Development</span><br>Web Application Development</li>
+                        </ui>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ui>
+                            <li><span>2024</span><br>Master of Computer Applications</li>
+                            <li><span>2012</span><br>Master of Social Work</li>
+                            <li><span>2007</span><br>Bachelor of Commerce</li>
+                        </ui>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ui>
+                            <li><span>2007 TO 2012</span><br>SAP HR - JUNIOR ENG</li>
+                        </ui>
+                    </div>
+                </div>
+                <div class="about-col-2">
+                    <img src="images/Image.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ---- Portfolio---- -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title"> My Work </h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/work-1.png" alt="">
+                    <div class="layer">
+                        <h3>ECommerce website</h3>
+                        <p>Developed a fully functional online platform using MERN stack.This website features
+                            product listing, shopping carts, and order management systems along with User
+                            authentication.
+                        </p>
+                        <a href="#">
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-2.png" alt="">
+                    <div class="layer">
+                        <h3>Restaurant Table Reservation System</h3>
+                        <p>Build a single page web application using React JS, to allow restaurant lovers to book
+                            appointments for their special occasions </p>
+                        <a href="#">
+                            <i class="fa-solid fa-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!---contact--->
+        <div class="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1 class="sub-title">Contact Me</h1>
+                        <p>jeniphernpaul@gmail.com</p>
+                        <div class="social-icons">
+                            <a href=""><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- ---JavaScript -->
+    <script>
+        var tabLinks = document.getElementsByClassName("tab-links");
+        var tabContents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabName) {
+            console.log(tabName)
+            for (tabLink of tabLinks) {
+                tabLink.classList.remove("active-link")
+            }
+
+            for (tabContent of tabContents) {
+                tabContent.classList.remove("active-tab")
+            }
+            event.currentTarget.classList.add("active-link")
+            document.getElementById(tabName).classList.add("active-tab")
+        }
+    </script>
+</body>
+
+</html>
