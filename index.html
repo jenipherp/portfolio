@@ -14,12 +14,12 @@
     <div id="header">
         <div class="container">
             <nav>
-                <img src="images/logo.png" alt="logo">
+                <a href="#header"><img src="images/logo.png" alt="logo"></a>
                 <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Portfolio</a></li>
-                    <li><a href="">Contact</a></li>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
             <div class="header-text">
@@ -46,6 +46,16 @@
                             <li><span>UI/UX</span><br>Designing Web/App Interfaces</li>
                             <li><span>Web Development</span><br>Web Application Development</li>
                         </ui>
+                        <div class="skills-icons">
+                            <i class="fa-brands fa-react"></i><br>
+                        </div>
+                        <div class="skills-icons"> <i class="fa-brands fa-js"></i></div>
+                        <div class="skills-icons"><i class="fa-brands fa-html5"></i>
+                        </div>
+                        <div class="skills-icons"><i class="fa-brands fa-css3-alt"></i><br>
+                        </div>
+                        <div class="skills-icons"> <i class="fa-brands fa-node"></i></div>
+                        <div class="skills-icons"> <i class="fa-solid fa-database"></i></div>
                     </div>
                     <div class="tab-contents" id="education">
                         <ui>
@@ -56,15 +66,17 @@
                     </div>
                     <div class="tab-contents" id="experience">
                         <ui>
-                            <li><span>2007 TO 2012</span><br>SAP HR - JUNIOR ENG</li>
+                            <li><span>2007 - 2012</span><br>SAP HR - JUNIOR ENG</li>
                         </ui>
                     </div>
                 </div>
                 <div class="about-col-2">
-                    <img src="images/Image.png" alt="">
+                    <div class="hobby-img"> <img src="images/hobby1.png" alt=""></div>
+                    <div class="hobby-img"> <img src="images/hobby2.png" alt=""></div>
                 </div>
             </div>
         </div>
+    </div>
     </div>
 
     <!-- ---- Portfolio---- -->
@@ -73,23 +85,23 @@
             <h1 class="sub-title"> My Work </h1>
             <div class="work-list">
                 <div class="work">
-                    <img src="images/work-1.png" alt="">
+                    <img src="images/ecommerce.png" alt="" width="650" height="400">
                     <div class="layer">
                         <h3>ECommerce website</h3>
-                        <p>Developed a fully functional online platform using MERN stack.This website features
-                            product listing, shopping carts, and order management systems along with User
+                        <p>A fully functional online ecommerce web application developed using MERN stack.This website
+                            features product listing, shopping carts, and order management systems along with User
                             authentication.
                         </p>
-                        <a href="#">
+                        <a href="https://jeni-genii.onrender.com/" target="blank">
                             <i class="fas fa-external-link-alt"></i>
                         </a>
                     </div>
                 </div>
                 <div class="work">
-                    <img src="images/work-2.png" alt="">
+                    <img src="images/Little Lemon.png" alt="" width="650" height="400">
                     <div class="layer">
                         <h3>Restaurant Table Reservation System</h3>
-                        <p>Build a single page web application using React JS, to allow restaurant lovers to book
+                        <p>A single page web application build using React JS, to allow restaurant lovers to book
                             appointments for their special occasions </p>
                         <a href="#">
                             <i class="fa-solid fa-up-right-from-square"></i>
@@ -98,21 +110,36 @@
                 </div>
             </div>
         </div>
-        <!---contact--->
-        <div class="contact">
-            <div class="container">
-                <div class="row">
-                    <div class="contact-left">
-                        <h1 class="sub-title">Contact Me</h1>
-                        <p>jeniphernpaul@gmail.com</p>
-                        <div class="social-icons">
-                            <a href=""><i class="fab fa-linkedin"></i></a>
-                        </div>
+    </div>
+    <!---contact--->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/jenipher-nancy-p-71331b2b8/" target="blank"><i
+                                class="fab fa-linkedin"></i> LinkedIn</a>
                     </div>
+                    <p><i class="fa-solid fa-envelope"></i>jeniphernpaul@gmail.com</p>
+                    <a href="images/Resume- Jenipher.pdf" download class="btn btn">Download Resume</a>
+                </div>
+                <div class="contact-right">
+                    <form action="">
+                        <input type="text" name="name" placeholder="Enter your Name" required>
+                        <input type="email" name="email" placeholder="Enter your email" required>
+                        <textarea name="message" rows="4" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn">Submit</button>
+                    </form>
                 </div>
             </div>
         </div>
-
+    </div>
+    <div class="copyright">
+        <div></div>
+        <p>This portfolio site is created using HTML, CSS, JavaScript</p>
+        <div></div>
+    </div>
     </div>
     <!-- ---JavaScript -->
     <script>
@@ -131,6 +158,17 @@
             event.currentTarget.classList.add("active-link")
             document.getElementById(tabName).classList.add("active-tab")
         }
+
+        const nav = document.querySelector('nav');
+
+        window.addEventListener('scroll', function () {
+            const offset = window.pageYOffset;
+
+            if (offset > 75)
+                nav.classList.add('scroll')
+            else
+                nav.classList.remove('scroll')
+        });
     </script>
 </body>
 
