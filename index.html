@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jenipher Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/f52cc9b91e.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- -----Header/home page--- -->
+    <div id="header">
+        <div class="container">
+            <nav>
+                <a href="#header"><img src="images/logo.png" alt="logo"></a>
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <h1>Hi, I'm <span>Jenipher Nancy</span></h1>
+                <p>Web Developer</p>
+            </div>
+        </div>
+    </div>
+    <!-- --About-- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+
+                <div class="about-col-1">
+                    <h1 class="sub-title">About Me</h1>
+                    <p> A Passionate web developer skilled in ReactJS</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ui>
+                            <li><span>UI/UX</span><br>Designing Web/App Interfaces</li>
+                            <li><span>Web Development</span><br>Web Application Development</li>
+                        </ui>
+                        <div class="skills-icons">
+                            <i class="fa-brands fa-react"></i><br>
+                        </div>
+                        <div class="skills-icons"> <i class="fa-brands fa-js"></i></div>
+                        <div class="skills-icons"><i class="fa-brands fa-html5"></i>
+                        </div>
+                        <div class="skills-icons"><i class="fa-brands fa-css3-alt"></i><br>
+                        </div>
+                        <div class="skills-icons"> <i class="fa-brands fa-node"></i></div>
+                        <div class="skills-icons"> <i class="fa-solid fa-database"></i></div>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ui>
+                            <li><span>2024</span><br>Master of Computer Applications</li>
+                            <li><span>2012</span><br>Master of Social Work</li>
+                            <li><span>2007</span><br>Bachelor of Commerce</li>
+                        </ui>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ui>
+                            <li><span>2007 - 2012</span><br>SAP HR - JUNIOR ENG</li>
+                        </ui>
+                    </div>
+                </div>
+                <div class="about-col-2">
+                    <div class="hobby-img"> <img src="images/hobby1.png" alt=""></div>
+                    <div class="hobby-img"> <img src="images/hobby2.png" alt=""></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- ---- Portfolio---- -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title"> My Work </h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/ecommerce.png" alt="" width="650" height="400">
+                    <div class="layer">
+                        <h3>ECommerce website</h3>
+                        <p>A fully functional online ecommerce web application developed using MERN stack.This website
+                            features product listing, shopping carts, and order management systems along with User
+                            authentication.
+                        </p>
+                        <a href="https://jeni-genii.onrender.com/" target="blank">
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/Little Lemon.png" alt="" width="650" height="400">
+                    <div class="layer">
+                        <h3>Restaurant Table Reservation System</h3>
+                        <p>A single page web application build using React JS, to allow restaurant lovers to book
+                            appointments for their special occasions </p>
+                        <a href="#">
+                            <i class="fa-solid fa-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---contact--->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/jenipher-nancy-p-71331b2b8/" target="blank"><i
+                                class="fab fa-linkedin"></i> LinkedIn</a>
+                    </div>
+                    <p><i class="fa-solid fa-envelope"></i>jeniphernpaul@gmail.com</p>
+                    <a href="images/Resume- Jenipher.pdf" download class="btn btn">Download Resume</a>
+                </div>
+                <div class="contact-right">
+                    <form action="">
+                        <input type="text" name="name" placeholder="Enter your Name" required>
+                        <input type="email" name="email" placeholder="Enter your email" required>
+                        <textarea name="message" rows="4" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <div></div>
+        <p>This portfolio site is created using HTML, CSS, JavaScript</p>
+        <div></div>
+    </div>
+    </div>
+    <!-- ---JavaScript -->
+    <script>
+        var tabLinks = document.getElementsByClassName("tab-links");
+        var tabContents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabName) {
+            console.log(tabName)
+            for (tabLink of tabLinks) {
+                tabLink.classList.remove("active-link")
+            }
+
+            for (tabContent of tabContents) {
+                tabContent.classList.remove("active-tab")
+            }
+            event.currentTarget.classList.add("active-link")
+            document.getElementById(tabName).classList.add("active-tab")
+        }
+
+        const nav = document.querySelector('nav');
+
+        window.addEventListener('scroll', function () {
+            const offset = window.pageYOffset;
+
+            if (offset > 75)
+                nav.classList.add('scroll')
+            else
+                nav.classList.remove('scroll')
+        });
+    </script>
+</body>
+
+</html>
